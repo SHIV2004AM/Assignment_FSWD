@@ -1,0 +1,70 @@
+1. Explain the Table and its properties.
+
+answer-> Table and its properties:
+In web development, a table is an HTML element used to organize and display data in a structured grid format. Tables consist of rows and columns, and they are commonly used for presenting tabular data, such as data in a spreadsheet-like format. The table tag in HTML is denoted by <table>, and several properties can be used to control its behavior and appearance:
+<table>: Defines the start of the table.
+<tr>: Represents a table row, used to group table data.
+<td>: Stands for "table data" and represents a single cell in a table row, containing data.
+<th>: Stands for "table header" and represents a header cell in a table row, used to label columns or rows.
+<caption>: Represents the table caption, providing a title or description for the table.
+<thead>: Defines the table header group, containing header cells (th elements).
+<tbody>: Defines the table body group, containing regular data cells (td elements).
+<tfoot>: Defines the table footer group, containing summary or footer cells.
+Tables are widely used for creating layouts in older web design, but for modern web development, they are mostly reserved for displaying actual tabular data. For layout purposes, developers tend to use more semantic elements like divs and CSS flexbox or grid.
+
+2. Explain all Media elements and how they work.
+
+answer-> Media elements and how they work:
+Media elements in web development refer to HTML tags used to display multimedia content, such as images, audio, and video. Here are the main media elements and how they work:
+<img>: Used to embed images on a webpage. It has a src attribute that specifies the image file's URL, and optionally alt attribute for alternative text (displayed if the image fails to load or for accessibility).
+
+<audio>: Used to embed audio content. You can use the src attribute to specify the audio file's URL and include fallback content within the tags.
+
+<video>: Used to embed video content. It supports various formats and codecs. You can use the src attribute to specify the video file's URL and provide fallback content within the tags.
+
+<source>: Used as a child element of <audio> or <video>. It allows you to specify different media files (e.g., different formats) for browsers that support different codecs.
+
+<track>: Used as a child element of <video> or <audio> to provide subtitles, captions, or other text tracks for media elements.
+
+Media elements work by loading the specified media file (image, audio, or video) and displaying it within the webpage. Modern browsers support various media formats, but it's essential to provide alternative formats to ensure cross-browser compatibility.
+
+3. What is Get and Post in Form?
+
+answer-> Get and Post in Form:
+In web development, the GET and POST methods are two common HTTP methods used to submit data from an HTML form to a server.
+GET method: When a form uses the GET method (specified by the method="GET" attribute in the <form> tag), the form data is appended to the URL as query parameters. This means that the data is visible in the URL, making it suitable for simple, non-sensitive data submissions.
+<form action="/submit" method="GET">
+  <input type="text" name="username" />
+  <input type="submit" value="Submit" />
+</form>
+
+When the form is submitted, the URL will look like this: http://example.com/submit?username=John
+
+POST method: When a form uses the POST method (specified by the method="POST" attribute in the <form> tag), the form data is sent in the request body, not visible in the URL. This method is preferred for sensitive data like passwords or large data submissions.
+Example:
+<form action="/submit" method="POST">
+  <input type="text" name="username" />
+  <input type="submit" value="Submit" />
+</form>
+
+When the form is submitted, the data is sent in the request body, and it's not visible in the URL.
+
+the GET method is suitable for simple queries and when you want the form data to be visible in the URL, while the POST method is more secure and appropriate for submitting sensitive or larger amounts of data.
+
+4. List all the input types we have in forms.
+
+answer-> List of input types in forms:
+HTML forms support various input types that allow users to enter different types of data. Here is a list of some commonly used input types:
+<input type="text">: Single-line text input.
+<input type="password">: Password input (characters are masked for security).
+<input type="number">: Numeric input (may include arrows for increment and decrement).
+<input type="email">: Email address input with built-in validation for email format.
+<input type="tel">: Telephone number input.
+<input type="url">: URL input with built-in validation for URL format.
+<input type="checkbox">: Checkbox input for selecting multiple options.
+<input type="radio">: Radio button input for selecting one option from a group.
+<input type="file">: File upload input for uploading files from the user's device.
+<input type="date">: Date input for selecting a date from a calendar.
+<input type="time">: Time input for selecting a time value.
+<input type="color">: Color picker input for selecting a color.
+These are just some examples of input types available in HTML forms. Each input type has specific attributes and behaviors to customize its appearance and functionality. 
