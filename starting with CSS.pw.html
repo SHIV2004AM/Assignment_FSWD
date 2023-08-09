@@ -1,0 +1,46 @@
+1. What is CSS and why use it?
+
+answer-> CSS stands for Cascading Style Sheets. It's a stylesheet language used to describe the presentation and formatting of a document written in HTML or XML. CSS is used to control how elements of a web page are displayed, including their layout, colors, fonts, spacing, and other visual aspects. It separates the content (HTML) of a web page from its presentation, making it easier to manage and maintain the design and layout of a website. CSS allows for consistent styling across multiple web pages and devices, making websites more visually appealing, user-friendly, and adaptable to different screen sizes and orientations.
+
+2. What are the different ways to bring CSS into an HTML file?
+
+answer-> There are several ways to include CSS styles in an HTML file:
+
+Inline CSS: You can apply styles directly to individual HTML elements using the style attribute. For example:
+<p style="color: blue;">This is a blue paragraph.</p>
+
+Internal CSS: You can embed CSS styles within a <style> element in the HTML <head> section. This style will apply to elements within that HTML document only.
+<head>
+  <style>
+    p {
+      color: red;
+    }
+  </style>
+</head>
+External CSS: Create a separate CSS file with .css extension and link it to the HTML document using the <link> element in the <head> section.
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+      </head>
+CSS Frameworks and Libraries: Utilize pre-designed CSS frameworks like Bootstrap or libraries like FontAwesome that provide a collection of styles and components to enhance your website's design and functionality.
+
+3. What do you mean by specificity in CSS?
+
+answer-> Specificity in CSS:
+Specificity refers to the rules that determine which CSS styles should be applied to an HTML element when multiple conflicting styles are defined. It's a measure of how specific a selector is in targeting an element. When there are conflicting styles, the browser needs to decide which style should take precedence.
+
+Specificity is calculated based on the combination of selectors used in a CSS rule. In general, the more specific a selector is, the higher its specificity. For example:
+
+Inline styles have the highest specificity.
+ID selectors have higher specificity than class selectors.
+Class selectors have higher specificity than tag selectors.
+
+To calculate specificity, you assign weights to different parts of a selector:
+
+1 specificity point for each ID selector
+1 specificity point for each class or attribute selector
+1 specificity point for each element selector
+So, a selector like #header .nav ul li.active would have a higher specificity than body p.
+
+When conflicting styles exist, the style with higher specificity will be applied. If two styles have equal specificity, the one defined later in the stylesheet takes precedence (CSS rule ordering).
+
+Understanding specificity helps developers control and predict how styles will be applied, ensuring consistent and expected design outcomes.
