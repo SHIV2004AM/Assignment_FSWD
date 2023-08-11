@@ -1,0 +1,54 @@
+1. Why CSS selectors are used in HTML?
+
+answer- > CSS selectors are used in HTML to target and style specific elements on a web page. HTML provides the structure and content of a webpage, while CSS is used to define the presentation and styling of those HTML elements. Selectors in CSS allow you to specify which HTML elements should be affected by the styles you define. This separation of structure (HTML) and presentation (CSS) is a fundamental principle of web design, as it allows for greater flexibility, maintainability, and consistency in the appearance of a website.
+
+2. What are the different types of Selectors in CSS?
+
+answer-> There are several types of CSS selectors:
+
+Type Selectors: These target elements based on their tag name. For example, p would target all <p> elements.
+
+Class Selectors: These target elements with a specific class attribute. They are denoted by a period followed by the class name, such as .example-class.
+
+ID Selectors: These target a specific element with a unique ID attribute. They are denoted by a hash symbol followed by the ID name, like #example-id.
+
+Descendant Selectors: These target elements that are descendants of a specific element. For example, div p would target all <p> elements that are inside a <div>.
+
+Child Selectors: These target elements that are direct children of a specific element. They are denoted by a greater-than symbol, like div > p.
+
+Adjacent Sibling Selectors: These target elements that share the same parent and come immediately after a specified element. For example, h2 + p would target the <p> element that directly follows an <h2>.
+
+Attribute Selectors: These target elements based on their attributes. For example, [type="submit"] would target all elements with a type attribute equal to "submit".
+
+Pseudo-classes and Pseudo-elements: These allow you to target elements in specific states or positions. Examples include :hover, :active, :nth-child(), and ::before.
+
+3. How do you include external fonts and apply them?
+
+answer-> To include external fonts and apply them to your website, you can follow these steps:
+
+Choose a Font: Select the font you want to use from a font provider like Google Fonts.
+
+Link the Font: In the <head> section of your HTML document, include a <link> tag to link the font stylesheet. This tag will be provided by the font provider or can be set up for self-hosting.
+
+Apply the Font: In your CSS, use the font-family property to specify the font for specific elements. For example:
+body {
+  font-family: 'Your Chosen Font', sans-serif;
+}
+Fallback Fonts: It's a good practice to include a fallback font family (e.g., sans-serif or serif) in case the chosen font fails to load.
+
+Here's an example of how the code might look:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Your+Chosen+Font&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Your Chosen Font', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>This is a paragraph with the applied font.</p>
+</body>
+</html>
