@@ -1,0 +1,60 @@
+1. What are media queries in CSS and their use case?
+
+answer-> Media Queries:
+Media queries are a CSS feature that allow you to apply styles based on the characteristics of the user's device or screen. They enable responsive web design, which means your website can adapt its layout and appearance to different screen sizes, resolutions, and orientations. Media queries are particularly useful for creating designs that work well on both desktop and mobile devices.
+Here's a basic example of a media query:
+/* Default styles for all screen sizes */
+body {
+  font-size: 16px;
+}
+
+/* Media query for screens with a maximum width of 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+In this example, the font size is reduced when the screen width is 600px or less, making the text more readable on smaller screens.
+
+
+2. Difference between min-width and max-width in media queries in CSS
+
+answer-> min-width vs. max-width:
+Both min-width and max-width are used in media queries to define certain conditions under which CSS rules should apply. However, they are used in slightly different ways:
+min-width: This condition applies the specified styles when the screen width is equal to or greater than the given value. It's typically used to define styles for larger screens or as a starting point for responsive design.
+
+max-width: This condition applies the specified styles when the screen width is equal to or smaller than the given value. It's commonly used to define styles for smaller screens, like mobile devices.
+
+Here's an example that illustrates the difference:
+/* Styles for screens with width greater than or equal to 800px */
+@media (min-width: 800px) {
+  }
+  
+  /* Styles for screens with width smaller than or equal to 600px */
+  @media (max-width: 600px) {
+  }
+
+  
+3. Explain float property and clear property in CSS with examples.
+
+answer-> Float and Clear Properties:
+float and clear are CSS properties that were historically used for layout purposes, although newer layout methods like Flexbox and Grid have largely replaced their usage. However, they're still worth understanding for legacy code or specific cases.
+
+float: The float property is used to control the positioning of an element within its containing element. When an element is floated, it is taken out of the normal document flow and positioned to the left or right of its containing element. This was commonly used for creating multi-column layouts before modern layout techniques became popular.
+.left-column {
+    float: left;
+    width: 50%;
+  }
+  
+  .right-column {
+    float: right;
+    width: 50%;
+  }
+  
+  clear: The clear property is used to control the behavior of elements following a floated element. It specifies whether an element should be moved below any floated elements to prevent unwanted overlap.
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  In the example above, the .clearfix class is often used to contain floated elements within a parent element to prevent layout issues.  
