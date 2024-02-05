@@ -1,0 +1,70 @@
+1. Write a function called "addNumbers" that takes two numbers as arguments and returns their sum. Call the
+function before it is declared to demonstrate hoisting.
+
+
+2. Write a function called "multiplyNumbers" that takes two numbers as arguments and returns their product.
+Use function expressions to define the function and call the function before it is declared to demonstrate
+hoisting.
+
+
+3. Write a function that takes two numbers as arguments and returns their sum. Declare a variable inside the
+function using the var keyword and log its value to the console before it is assigned a value to demonstrate
+variable hoisting.
+
+
+4. Declare three variables, one using let, one using var, and one using const, all inside a block scope. Assign
+them values and log their values to the console before and after they are declared to demonstrate variable
+hoisting.
+
+5. Declare a variable using let inside a block scope and attempt to log its value to the console before it is
+assigned a value to demonstrate the temporal dead zone.
+
+
+
+
+
+// Task 1
+addNumbers(5, 7); // Calling before declaration
+
+function addNumbers(a, b) {
+    return a + b;
+}
+
+// Task 2
+multiplyNumbers(3, 4); // Calling before declaration
+
+var multiplyNumbers = function (a, b) {
+    return a * b;
+};
+
+// Task 3
+function sumWithVar(a, b) {
+    var result; // Variable declared with var
+    console.log(result); // Logs 'undefined' due to hoisting
+    result = a + b;
+    return result;
+}
+
+sumWithVar(10, 20);
+
+// Task 4
+{
+    console.log(letVar); // Throws ReferenceError due to temporal dead zone
+    let letVar = 5;
+    console.log(letVar); // Logs 5
+
+    console.log(varVar); // Logs undefined due to hoisting
+    var varVar = 10;
+    console.log(varVar); // Logs 10
+
+    console.log(constVar); // Throws ReferenceError due to temporal dead zone
+    const constVar = 15;
+    console.log(constVar); // Logs 15
+}
+
+// Task 5
+{
+    console.log(blockScopedVar); // Throws ReferenceError due to temporal dead zone
+    let blockScopedVar = 25;
+    console.log(blockScopedVar); // Logs 25
+}
