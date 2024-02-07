@@ -1,0 +1,97 @@
+1. Reverse String.
+
+function reverseString(input) {
+    setTimeout(() => {
+        const reversedString = input.split('').reverse().join('');
+        console.log(reversedString);
+    }, 2000);
+}
+
+const input = "hello";
+reverseString(input);
+
+
+2. Random Number Generator with Delay and Progress Indication:
+
+function randomNumberGenerator(delayInSeconds) {
+    let remainingTime = delayInSeconds;
+    const interval = setInterval(() => {
+        console.log(`Time remaining: ${remainingTime} seconds`);
+        remainingTime--;
+        if (remainingTime === 0) {
+            clearInterval(interval);
+            const randomNumber = Math.floor(Math.random() * 100); // Example random number
+            console.log(`Random number generated: ${randomNumber}`);
+        }
+    }, 1000);
+}
+
+const delayInSeconds = 3;
+randomNumberGenerator(delayInSeconds);
+
+
+3. Build a feature for Store's Inventory.
+
+
+const storeInventory = {
+    "apple": 2.5,
+    "banana": 1.8,
+    "orange": 3.0
+};
+
+const exchangeRate = 80;
+
+const convertedPrices = Object.fromEntries(
+    Object.entries(storeInventory).map(([item, price]) => [item, price * exchangeRate])
+);
+
+console.log(convertedPrices);
+
+
+4. Filtering and Capitalizing: Books Published After 2010 with Author Names.
+
+
+const books = [
+    { title: "Book 1", author: "author1", publicationYear: 2008 },
+    { title: "Book 2", author: "author2", publicationYear: 2015 },
+    { title: "Book 3", author: "author3", publicationYear: 2011 }
+];
+
+const filteredBooks = books
+    .filter(book => book.publicationYear >= 2010)
+    .map(book => ({ ...book, author: book.author.toUpperCase() }));
+
+console.log(filteredBooks);
+
+
+5. URL validation.
+
+
+function validateURL(url) {
+    const regex = /^(http:\/\/|https:\/\/)([\w\d-]+\.)+[a-zA-Z]+$/;
+    if (regex.test(url)) {
+        console.log("Valid URL");
+    } else {
+        console.log("Invalid URL");
+    }
+}
+
+const inputURL = "https://www.example.com";
+validateURL(inputURL);
+
+
+
+6. LinkedIn Profile URL Validator.
+
+
+function validateLinkedInURL(url) {
+    const regex = /^https:\/\/www\.linkedin\.com\/in\/[\w\d-]{5,30}[a-zA-Z\d]$/;
+    if (regex.test(url)) {
+        console.log("Valid LinkedIn Profile URL");
+    } else {
+        console.log("Invalid LinkedIn Profile URL");
+    }
+}
+
+const linkedInURL = "https://www.linkedin.com/in/johndoe123";
+validateLinkedInURL(linkedInURL);
