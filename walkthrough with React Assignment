@@ -1,0 +1,85 @@
+1. Create a component named "Person" that takes two props - "name" and "age". The component should
+display the person's name and age in a paragraph element.
+
+import React from 'react';
+
+const Person = ({ name, age }) => {
+  return (
+    <p>
+      Name: {name}, Age: {age}
+    </p>
+  );
+};
+
+export default Person;
+
+
+2. Create a component named "Button" that takes two props - "text" and "onClick". The component should
+display a button element with the given text and call the onClick function when clicked.
+
+import React from 'react';
+
+const Button = ({ text, onClick }) => {
+  return (
+    <button onClick={onClick}>
+      {text}
+    </button>
+  );
+};
+
+export default Button;
+
+
+3. Create a component named "Header" that takes one prop - "title". The component should display a header
+element with the given title.
+
+
+import React from 'react';
+
+const Header = ({ title }) => {
+  return (
+    <h1>{title}</h1>
+  );
+};
+
+export default Header;
+
+
+
+4. Create a component named "List" that takes one prop - "items". The component should display an
+unordered list element with the given list items.
+
+import React from 'react';
+
+const List = ({ items }) => {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+};
+
+export default List;
+
+We can use these components in your React application by importing them and passing props accordingly. For example:
+
+import React from 'react';
+import Person from './Person';
+import Button from './Button';
+import Header from './Header';
+import List from './List';
+
+function App() {
+  return (
+    <div>
+      <Header title="My Header" />
+      <Person name="John Doe" age={30} />
+      <Button text="Click Me" onClick={() => alert('Button clicked!')} />
+      <List items={['Item 1', 'Item 2', 'Item 3']} />
+    </div>
+  );
+}
+
+export default App;
